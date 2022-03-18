@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        alert('by insert berkatsoft(in capital or low case) word the value is true')
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <div>
+       <form action="" id="formCheck">
+            <input type="text" placeholder="Please Input Your Text" id="task1">
+            <input type="submit" value="check" id="check">
+       </form>
+       
+    </div>
+
+    <h3>The Answer is :</h3>
+    <p id="result"></p>
+
+
+
+    <script>
+        var result = document.getElementById('result');
+        var form = document.getElementById('formCheck');
+        var word = "berkatsoft"
+
+        form.addEventListener('submit', function (action){
+            action.preventDefault()
+
+        
+        var text = document.getElementById('task1').value;
+        
+            if(text.toLowerCase() === word){
+                resultForm = "True"
+            }else{
+                resultForm = "False"
+            }
+
+            result.innerHTML = resultForm
+        })
+    </script>
+</body>
+</html>
